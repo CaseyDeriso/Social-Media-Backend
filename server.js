@@ -13,6 +13,7 @@ mongoose.connect("mongodb://localhost/friends", {
   useFindAndModify: false,
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  useCreateIndex: true
 });
 
 
