@@ -1,29 +1,6 @@
 const { Schema, model, Types } = require("mongoose");
 const moment = require("moment");
 
-
-const thoughtSchema = new Schema(
-  {
-    thoughtText: {
-      type: String,
-      required: "Please provide Thought text!",
-      minLength: 1,
-      maxlength: 280,
-    },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-      get: (value) => moment().format("MMM Do YY, h:mm a")
-    },
-    // should be the user who made the thought
-    username: {
-      type: String,
-      required: true,
-    },
-    reactions: [reactionSchema]
-  }
-);
-
 const reactionSchema = new Schema(
   {
     reactionId: {
@@ -46,6 +23,28 @@ const reactionSchema = new Schema(
     },
   }
 )
+
+const thoughtSchema = new Schema(
+  {
+    thoughtText: {
+      type: String,
+      required: "Please provide Thought text!",
+      minLength: 1,
+      maxlength: 280,
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+      get: (value) => moment().format("MMM Do YY, h:mm a")
+    },
+    // should be the user who made the thought
+    username: {
+      type: String,
+      required: true,
+    },
+    reactions: [reactionSchema]
+  }
+);
 
 const Thought = model("Thought", thoughtSchema)
 

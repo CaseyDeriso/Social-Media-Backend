@@ -1,5 +1,5 @@
-import { Schema, model, Types } from "mongoose";
-import { thoughtSchema } from "./Thought"
+const { Schema, model, Types } =  require("mongoose");
+const { thoughtSchema } = require("./Thought");
 
 const userSchema = new Schema({
   username: {
@@ -17,13 +17,13 @@ const userSchema = new Schema({
     ],
   },
   thoughts: [thoughtSchema],
-  friends: [userSchema]
+  // friends: [userSchema]
 });
 
-User.virtual("FriendCount").get(function() {
-  return this.friends.length;
-})
-
 const User = model("User", userSchema)
+
+// User.virtual("FriendCount").get(function() {
+//   return this.friends.length;
+// })
 
 module.exports = User;

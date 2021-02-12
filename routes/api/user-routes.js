@@ -1,7 +1,9 @@
 const router = require("express").Router();
-const {} = require("../../controllers/comment-controller");
+const {
+  getAllUsers
+} = require("../../controllers/user-controller");
 
 // api/users/
-router.route("/");
+router.route("/").get(getAllUsers);
 
 module.exports = router;
