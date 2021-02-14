@@ -5,7 +5,7 @@
 
 ## Description
 
-This project is a NoSql databse. It uses mongobd via the Mongoose.js ODM. Access to the databse is done throught express.js routes. This application is built using the MVC design pattern. 
+This project is a NoSql database. It uses mongobd via the Mongoose.js ODM. Access to the database is done throught express.js routes. This application is built using the MVC design pattern.
 
 ## Table of Contents:
 * [Installation](#installation)
@@ -15,7 +15,7 @@ This project is a NoSql databse. It uses mongobd via the Mongoose.js ODM. Access
 
 ## Installation 
 
-To run this server and databse: Node.js must be installed on your local machine. For the databse, you can modify the string on line 12 to a mongodb Atlas url, or install mongodb on your machine to run it locally. After cloning this repo and modifying server.js if neccessary, run 'npm install' and 'npm start' to run the program. all routes are set in the routes directory and can be hit using a https request tool like postman or insomnia. 
+To run this server and database: Node.js must be installed on your local machine. For the database, you can modify the string on line 12 to a MongoDB Atlas url, or install MongoDB on your machine to run it locally. After cloning this repo and modifying server.js if necessary, run 'npm install' and 'npm start' to run the program. All routes are set in the routes directory and can be hit using a https request tool like postman or insomnia.
 
 ## Usage 
 
@@ -25,7 +25,7 @@ This back end supports and social media type project that hosts users data in th
 
 ## Credits
 
-UT coding bootcamp. 
+UT coding boot camp. 
 
 ## License 
 
